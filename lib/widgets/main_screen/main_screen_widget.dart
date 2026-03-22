@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:moviedb_app/design/colors.dart';
 import 'package:moviedb_app/design/styles.dart';
 import 'package:moviedb_app/widgets/movie_list/movie_list_widget.dart';
 

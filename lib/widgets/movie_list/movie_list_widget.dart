@@ -1,7 +1,4 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
-import 'package:moviedb_app/design/colors.dart';
 import 'package:moviedb_app/design/dimentions.dart';
 import 'package:moviedb_app/design/styles.dart';
 
