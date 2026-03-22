@@ -72,31 +72,76 @@ class _FormWidget extends StatefulWidget {
 }
 
 class _FormWidgetState extends State<_FormWidget> {
+  final _loginTextController = TextEditingController();
+  final _passwordTextController = TextEditingController();
+  String? errorText = null;
+
+  void _auth() {
+    final login = _loginTextController.text;
+    final password = _passwordTextController.text;
+
+    if (login == 'admin' && password == 'admin') {
+      errorText = null;
+
+      final navigator = Navigator.of(context);
+      navigator.pushReplacementNamed('/main_screen');
+    } else {
+      errorText = 'Неверный логин или пароль';
+    }
+
+    setState(() {});
+  }
+
+  void _resetPassword() {
+    print('Reset password');
+  }
+
   @override
   Widget build(BuildContext context) {
+    final errorText = this.errorText;
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        if (errorText != null)
+          Container(
+            child: Column(
+              children: [
+                Text(
+                  errorText,
+                  style: TextStyle(color: Colors.red, fontSize: fontSize16),
+                ),
+                SizedBox(height: height16),
+              ],
+            ),
+          ),
         Text('Имя пользователя', style: textBasic),
         SizedBox(height: height4),
-        TextField(decoration: textFieldDecoration),
+        TextField(
+          controller: _loginTextController,
+          decoration: textFieldDecoration,
+        ),
         SizedBox(height: height16),
         Text('Пароль', style: textBasic),
         SizedBox(height: height4),
-        TextField(decoration: textFieldDecoration, obscureText: true),
+        TextField(
+          controller: _passwordTextController,
+          decoration: textFieldDecoration,
+          obscureText: true,
+        ),
         SizedBox(height: height32),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             TextButton(
               style: buttonLoginStyle,
-              onPressed: () {},
+              onPressed: _auth,
               child: Text('Войти', style: textBasic),
             ),
             SizedBox(width: width16),
             TextButton(
               style: buttonResetPswStyle,
-              onPressed: () {},
+              onPressed: _resetPassword,
               child: Text('Сбросить пароль', style: textButResPswStyle),
             ),
           ],
