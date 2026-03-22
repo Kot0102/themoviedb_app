@@ -25,6 +25,34 @@ const TextStyle textButResPswStyle = TextStyle(
   fontWeight: FontWeight(400),
 );
 
+const TextStyle textHeadCardMovieStyle = TextStyle(
+  color: textBasicColor,
+  fontSize: fontSize16,
+  fontFamily: "SourceSansPro",
+  fontWeight: FontWeight(600),
+);
+
+const TextStyle textHeadENCardMovieStyle = TextStyle(
+  color: textHeadGreyColor,
+  fontSize: fontSize16,
+  fontFamily: "SourceSansPro",
+  fontWeight: FontWeight(400),
+);
+
+const TextStyle textDescriptionCardStyle = TextStyle(
+  color: textBasicColor,
+  fontSize: fontSize14,
+  fontFamily: "SourceSansPro",
+  fontWeight: FontWeight(400),
+);
+
+const TextStyle textDateCardStyle = TextStyle(
+  color: textHeadGreyColor,
+  fontSize: fontSize16,
+  fontFamily: "SourceSansPro",
+  fontWeight: FontWeight(500),
+);
+
 // Стили для полей ввода форм
 
 final textFieldDecoration = InputDecoration(

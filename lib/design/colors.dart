@@ -10,6 +10,7 @@ const Color mainBackgroundColor = Color(0xFFFFFFFF);
 
 const Color textAppbarColor = Color(0xFFFFFFFF);
 const Color textBasicColor = Color(0xFF000000);
+const Color textHeadGreyColor = Color(0xFF999999);
 
 // Цвета, связанные с полями ввода
 
@@ -20,3 +21,7 @@ const Color borderInputColor = Color(0xFF01B4E4);
 const Color buttonLoginBackColor = Color(0xFFDEE2E6);
 const Color buttomRessetPsvBackColor = Color(0xFFFFFFFF);
 const Color buttonRessetPswTextColor = Color(0xFF01B4E4);
+
+// Цвета, связанные с BottomNavBar
+
+const Color bottomNavBarBckColor = Color(0xFFF8F9FA);

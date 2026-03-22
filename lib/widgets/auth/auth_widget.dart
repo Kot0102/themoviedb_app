@@ -72,8 +72,8 @@ class _FormWidget extends StatefulWidget {
 }
 
 class _FormWidgetState extends State<_FormWidget> {
-  final _loginTextController = TextEditingController();
-  final _passwordTextController = TextEditingController();
+  final _loginTextController = TextEditingController(text: 'admin');
+  final _passwordTextController = TextEditingController(text: 'admin');
   String? errorText = null;
 
   void _auth() {
@@ -84,7 +84,7 @@ class _FormWidgetState extends State<_FormWidget> {
       errorText = null;
 
       final navigator = Navigator.of(context);
-      navigator.pushReplacementNamed('/main_screen');
+      navigator.pushNamed('/main_screen');
     } else {
       errorText = 'Неверный логин или пароль';
     }

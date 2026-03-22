@@ -15,10 +15,17 @@ class TheMovieDB extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'TheMovieDB',
-      theme: ThemeData(appBarTheme: AppBarTheme(backgroundColor: primaryColor)),
+      theme: ThemeData(
+        appBarTheme: AppBarTheme(backgroundColor: primaryColor),
+        bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          backgroundColor: primaryColor,
+          selectedItemColor: textAppbarColor,
+          unselectedItemColor: Colors.grey,
+        ),
+      ),
       routes: {
         '/auth': (context) => AuthWidget(),
-        '/main_screen': (context) => MainScreenWidget()
+        '/main_screen': (context) => MainScreenWidget(),
       },
       initialRoute: '/auth',
     );
