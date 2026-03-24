@@ -55,6 +55,22 @@ const TextStyle textDateCardStyle = TextStyle(
 
 // Стили для полей ввода форм
 
+final textFieldSearchDecoration = InputDecoration(
+  labelText: 'Поиск',
+  fillColor: textAppbarColor.withAlpha(235),
+  filled: true,
+  border: OutlineInputBorder(borderRadius: BorderRadius.circular(radius8)),
+  isCollapsed: true,
+  contentPadding: EdgeInsets.symmetric(
+    horizontal: padding8,
+    vertical: padding8,
+  ),
+  focusedBorder: OutlineInputBorder(
+    borderRadius: BorderRadius.circular(radius8),
+    borderSide: BorderSide(color: Color(0xFF01B4E4), width: 1),
+  ),
+);
+
 final textFieldDecoration = InputDecoration(
   border: OutlineInputBorder(borderRadius: BorderRadius.circular(radius8)),
   isCollapsed: true,

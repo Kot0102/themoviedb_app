@@ -20,5 +20,6 @@ const double padding8 = 8;
 const double padding12 = 12;
 const double padding14 = 14;
 const double padding20 = 20;
+const double padding70 = 70;
 
 const double radius8 = 8;
