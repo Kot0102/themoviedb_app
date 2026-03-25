@@ -10,14 +10,17 @@ const double height10 = 10;
 const double height16 = 16;
 const double height20 = 20;
 const double height32 = 32;
+const double height135 = 135;
 const double height141 = 141;
 const double height185 = 185;
+const double height260 = 260;
 
 const double width4 = 4;
 const double width8 = 8;
 const double width10 = 10;
 const double width16 = 16;
 const double width94 = 94;
+const double width122 = 122;
 
 const double padding4 = 4;
 const double padding6 = 6;

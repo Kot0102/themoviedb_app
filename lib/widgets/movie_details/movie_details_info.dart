@@ -27,7 +27,7 @@ class MovieDetailsInfo extends StatelessWidget {
 }
 
 class _team extends StatelessWidget {
-  const _team({super.key});
+  const _team();
 
   @override
   Widget build(BuildContext context) {
@@ -95,7 +95,7 @@ class _team extends StatelessWidget {
 }
 
 class _description extends StatelessWidget {
-  const _description({super.key});
+  const _description();
 
   @override
   Widget build(BuildContext context) {
@@ -118,7 +118,7 @@ class _description extends StatelessWidget {
 }
 
 class _reviewHeader extends StatelessWidget {
-  const _reviewHeader({super.key});
+  const _reviewHeader();
 
   @override
   Widget build(BuildContext context) {
@@ -146,7 +146,7 @@ class _reviewHeader extends StatelessWidget {
 }
 
 class _quote extends StatelessWidget {
-  const _quote({super.key});
+  const _quote();
 
   @override
   Widget build(BuildContext context) {
@@ -169,7 +169,7 @@ class _quote extends StatelessWidget {
 }
 
 class _summury extends StatelessWidget {
-  const _summury({super.key});
+  const _summury();
 
   @override
   Widget build(BuildContext context) {
@@ -180,14 +180,50 @@ class _summury extends StatelessWidget {
           vertical: padding10,
           horizontal: 90,
         ),
-        child: Text(
-          '26/02/2026 (NL) 1h 54m ужасы, детектив, and криминал',
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            color: textAppbarColor,
-            fontSize: fontSize16,
-            fontFamily: "SourceSansPro",
-          ),
+        child: Column(
+          children: [
+            Text(
+              '26/02/2026 (NL) 1h 54m',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: textAppbarColor,
+                fontSize: fontSize16,
+                fontFamily: "SourceSansPro",
+              ),
+            ),
+            TextButton(
+              onPressed: () {},
+              style: TextButton.styleFrom(
+                padding: EdgeInsets.zero,
+                minimumSize: Size.zero,
+                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.play_arrow, color: textAppbarColor),
+                  SizedBox(width: width4),
+                  Text(
+                    "Воспроизвести трейлер",
+                    style: TextStyle(
+                      color: textAppbarColor,
+                      fontSize: fontSize16,
+                      fontFamily: "SourceSansPro",
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Text(
+              'ужасы, детектив, and криминал',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: textAppbarColor,
+                fontSize: fontSize16,
+                fontFamily: "SourceSansPro",
+              ),
+            ),
+          ],
         ),
       ),
     );
@@ -195,7 +231,7 @@ class _summury extends StatelessWidget {
 }
 
 class _movieRating extends StatelessWidget {
-  const _movieRating({super.key});
+  const _movieRating();
 
   @override
   Widget build(BuildContext context) {
@@ -217,7 +253,9 @@ class _movieRating extends StatelessWidget {
               fontFamily: "SourceSansPro",
             ),
           ),
-          SizedBox(width: width16),
+          SizedBox(width: width8),
+          Container(color: textAppbarColor, width: 1, height: 16),
+          SizedBox(width: width8),
           Text(
             'What`s your time Vibe?',
             style: TextStyle(
@@ -234,7 +272,7 @@ class _movieRating extends StatelessWidget {
 }
 
 class _nameAndYearMovie extends StatelessWidget {
-  const _nameAndYearMovie({super.key});
+  const _nameAndYearMovie();
 
   @override
   Widget build(BuildContext context) {
@@ -274,7 +312,7 @@ class _nameAndYearMovie extends StatelessWidget {
 }
 
 class _topPosterMovie extends StatelessWidget {
-  const _topPosterMovie({super.key});
+  const _topPosterMovie();
 
   @override
   Widget build(BuildContext context) {

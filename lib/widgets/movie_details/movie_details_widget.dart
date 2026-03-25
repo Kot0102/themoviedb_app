@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:moviedb_app/design/styles.dart';
+import 'package:moviedb_app/widgets/movie_details/movie_details_cast.dart';
 import 'package:moviedb_app/widgets/movie_details/movie_details_info.dart';
 
 class MovieDetailsWidget extends StatefulWidget {
@@ -19,9 +20,7 @@ class _MovieDetailsWidgetState extends State<MovieDetailsWidget> {
         iconTheme: IconThemeData(color: Colors.white),
         title: Text("Военная машина", style: titleAppBar),
       ),
-      body: ListView(
-        children: [MovieDetailsInfo()],
-      ),
+      body: ListView(children: [MovieDetailsInfo(), MovieDetailsCast()]),
     );
   }
 }
