@@ -28,7 +28,7 @@ class MovieListWidget extends StatefulWidget {
 }
 
 class _MovieListWidgetState extends State<MovieListWidget> {
-  final _movies = [
+  final movies = [
     Movie(
       id: 0,
       imageName: 'assets/images/war_machine.jpg',
@@ -74,11 +74,11 @@ class _MovieListWidgetState extends State<MovieListWidget> {
   void _searchMovies() {
     final query = _searchController.text;
     if (query.isNotEmpty) {
-      _filtredMovies = _movies.where((Movie movie) {
+      _filtredMovies = movies.where((Movie movie) {
         return movie.titleRU.toLowerCase().contains(query.toLowerCase());
       }).toList();
     } else {
-      _filtredMovies = _movies;
+      _filtredMovies = movies;
     }
     setState(() {});
   }
@@ -87,12 +87,12 @@ class _MovieListWidgetState extends State<MovieListWidget> {
   void initState() {
     super.initState();
 
-    _filtredMovies = _movies;
+    _filtredMovies = movies;
     _searchController.addListener(_searchMovies);
   }
 
   void _movieDetails(int index) {
-    final id = _movies[index].id;
+    final id = movies[index].id;
     final navigator = Navigator.of(context);
     navigator.pushNamed('/main_screen/movie_details', arguments: id);
   }

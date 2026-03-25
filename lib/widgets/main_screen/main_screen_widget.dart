@@ -23,7 +23,9 @@ class _MainScreenWidgetState extends State<MainScreenWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text('TMDB', style: titleAppBar)),
+        centerTitle: true,
+        iconTheme: IconThemeData(color: Colors.white),
+        title: Text('TMDB', style: titleAppBar),
       ),
       body: IndexedStack(
         index: _selectedTab,
